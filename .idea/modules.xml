@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SnapDeal.iml" filepath="$PROJECT_DIR$/.idea/modules/SnapDeal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SnapDeal_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SnapDeal_main.iml" group="SnapDeal" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SnapDeal_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SnapDeal_test.iml" group="SnapDeal" />
+    </modules>
+  </component>
+</project>
