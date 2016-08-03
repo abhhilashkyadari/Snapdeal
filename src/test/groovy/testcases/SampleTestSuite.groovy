@@ -23,7 +23,7 @@ class SampleTestSuite extends GebReportingSpec {
         and: "Select a price range for mobiles"
         to MobilePhonesPage
         selectPriceRange("Rs 5000-10000")
-        then:""
+        then:"User navigated selected Price range phones page"
     }
 
     def cleanup()
