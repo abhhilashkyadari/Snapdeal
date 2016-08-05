@@ -19,6 +19,5 @@ class SubMenuModule extends Module{
         productTitle{$(".pdp-e-i-head")}
         ratingLink{$(".showRatingTooltip.reviewCacheUpdate")}
         ratingValue{$(".ratetxt>span")}
-
     }
 }

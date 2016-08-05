@@ -7,7 +7,7 @@ import snapdealPage.SubMenuPage
 /**
  * Created by abhilashk on 8/3/2016.
  */
-class SampleTestSuite extends GebReportingSpec {
+class SanpdealSuite extends GebReportingSpec {
 
     def setup() {
         browser.driver.manage().window().maximize()

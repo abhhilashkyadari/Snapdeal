@@ -3,6 +3,7 @@
  */
 package snapdealPage
 import geb.Page
+import geb.error.RequiredPageContentNotPresent
 import org.openqa.selenium.By
 import org.openqa.selenium.WebElement
 import snapdealModule.SubMenuModule
@@ -18,8 +19,13 @@ class SubMenuPage extends Page{
      */
     def sync(def element)
     {
-        waitFor (10){
-            element.isDisplayed()
+        try {
+            waitFor(10) {
+                element.isDisplayed()
+            }
+        }catch (RequiredPageContentNotPresent e)
+        {
+            print("Object is not present or not loaded in given time " +element)
         }
     }
 
@@ -45,6 +51,7 @@ class SubMenuPage extends Page{
         subMenuPageObjects.priceUpTo.value(to)
         sync(subMenuPageObjects.search)
         subMenuPageObjects.search.click()
+        sleep(1000)
     }
 
     /*
@@ -53,15 +60,12 @@ class SubMenuPage extends Page{
     def selectTopRatedProduct()
     {
         List<WebElement> products=subMenuPageObjects.productsList
-        float compare
+        float compare=0.0
         int key
         for(int i=0;i<products.size();i++){
-
-            //products.get(i)
-            //String str=rates.get(i).findElement(org.openqa.selenium.By.cssSelector(".filled-stars")).getAttribute("style").split(":")[1].trim().replace("%;","")
             String str=products.get(i).findElement(By.cssSelector(".filled-stars")).getAttribute("style").split(":")[1].trim().replace("%","").replace(";","")
-            //float val= Float.parseFloat(str)
-            double val=Double.parseDouble(str)
+            float val= Float.parseFloat(str)
+            //double val=Double.parseDouble(str)
             if (i==0)
             {
                 compare=val
@@ -74,8 +78,10 @@ class SubMenuPage extends Page{
                     compare=val
                     key=i
                 }
+                //print(key+ "   "+val)
             }
         }
+        println(key)
         products.get(key).findElement(By.cssSelector(".product-title")).click()
 
     }
@@ -85,11 +91,11 @@ class SubMenuPage extends Page{
      */
     def customerRatingFilter()
     {
-        sleep(2000)
         sync(subMenuPageObjects.expandCustomerRatingSection)
         subMenuPageObjects.expandCustomerRatingSection.click()
         sync(subMenuPageObjects.customertRatingRadioButton)
         subMenuPageObjects.customertRatingRadioButton.click()
+        sleep(1000)
     }
 
     /*
@@ -100,6 +106,8 @@ class SubMenuPage extends Page{
     {
         println(subMenuPageObjects.productTitle.text())
         subMenuPageObjects.ratingLink.click()
+        //sync(subMenuPageObjects.ratingValue)
+        sleep(1000)
         float actualRating=Float.parseFloat(subMenuPageObjects.ratingValue.text())
         if(actualRating==5.0)
         {
