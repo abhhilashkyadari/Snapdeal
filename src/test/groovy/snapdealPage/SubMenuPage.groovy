@@ -60,29 +60,38 @@ class SubMenuPage extends Page{
     def selectTopRatedProduct()
     {
         List<WebElement> products=subMenuPageObjects.productsList
-        float compare=0.0
+        float previous
         int key
-        for(int i=0;i<products.size();i++){
-            String str=products.get(i).findElement(By.cssSelector(".filled-stars")).getAttribute("style").split(":")[1].trim().replace("%","").replace(";","")
-            float val= Float.parseFloat(str)
-            //double val=Double.parseDouble(str)
-            if (i==0)
-            {
-                compare=val
-                key=i
-            }
-            if(i!=0)
-            {
-                if(val>compare)
-                {
-                    compare=val
-                    key=i
+        if (products.size()==0)
+        {
+            products.get(key).findElement(By.cssSelector(".product-title")).click()
+        }
+        else {
+            try {
+                for (int i = 0; i < products.size(); i++) {
+
+                    String str = products.get(i).findElement(By.cssSelector(".filled-stars")).getAttribute("style").split(":")[1].trim().replace("%", "").replace(";", "")
+                    float val = Float.parseFloat(str)
+                    //double val=Double.parseDouble(str)
+                    if (i == 0) {
+                        previous = val
+                        key = i
+                    }
+
+                    if (i > 0) {
+                        if (previous < val) {
+                            key = i
+                            previous = val
+                        }
+                    }
                 }
-                //print(key+ "   "+val)
+                products.get(key).findElement(By.cssSelector(".product-title")).click()
+            }
+            catch (Exception e)
+            {
+                print("Exception in finding highest rated value i.e., provided invalid pattern in split() ")
             }
         }
-        println(key)
-        products.get(key).findElement(By.cssSelector(".product-title")).click()
 
     }
 

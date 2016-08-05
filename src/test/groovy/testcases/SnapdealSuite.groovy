@@ -7,13 +7,13 @@ import snapdealPage.SubMenuPage
 /**
  * Created by abhilashk on 8/3/2016.
  */
-class SanpdealSuite extends GebReportingSpec {
+class SnapdealSuite extends GebReportingSpec {
 
     def setup() {
         browser.driver.manage().window().maximize()
     }
 
-    def selectTopRated() {
+    def selectTopRatedForGivenProductType() {
         given: "Navigate to Base url"
         to HomePage
         when: "Hover on specified Menu"
