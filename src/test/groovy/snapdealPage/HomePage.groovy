@@ -7,7 +7,8 @@ import snapdealModule.HomePageModule
  * Created by abhilashk on 8/3/2016.
  */
 class HomePage extends Page{
-    static at = {title == "Online Shopping in India at Snapdeal - Buy Books, Mobiles, Laptops, Apparel, Watches, Footwear, Recharge, Bill Payments & More"}
+    static at = {title=="Online Shopping in India at Snapdeal - Buy Books, Mobiles, Laptops, Apparel, Watches, Footwear, Recharge, Bill Payments & More"}
+    //static at = {$("title").text().startsWith("Online Shopping in India at Snapdeal")}
 
     static content={
         homePageObjects {module HomePageModule}
@@ -24,9 +25,6 @@ class HomePage extends Page{
 
     def gotoSubMenu(def submenu)
     {
-        /*interact {
-            moveToElement(homePageObjects.submenuLink(submenu))
-        }*/
         homePageObjects.submenuLink(submenu).click()
     }
 

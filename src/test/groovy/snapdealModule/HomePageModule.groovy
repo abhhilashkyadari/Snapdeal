@@ -9,7 +9,5 @@ class HomePageModule extends Module{
     static content={
         menuLink {menu->$(".catText", text:menu)}
         submenuLink{submenu->$(".headingText", text:submenu)}
-
-
     }
 }

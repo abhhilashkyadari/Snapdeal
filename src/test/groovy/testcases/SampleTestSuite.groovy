@@ -2,7 +2,7 @@ package testcases
 
 import geb.spock.GebReportingSpec
 import snapdealPage.HomePage
-import snapdealPage.MobilePhonesPage
+import snapdealPage.SubMenuPage
 
 /**
  * Created by abhilashk on 8/3/2016.
@@ -13,21 +13,22 @@ class SampleTestSuite extends GebReportingSpec {
         browser.driver.manage().window().maximize()
     }
 
-    def selectMobileByPriceRange() {
+    def selectTopRated() {
         given: "Navigate to Base url"
         to HomePage
         when: "Hover on specified Menu"
-        gotoMenu("Mobiles & Tablets")
+        gotoMenu("Computers, Office & Gaming")
         and: "Select submenu"
-        gotoSubMenu("Mobile Phones")
-        and: "Select a price range for mobiles"
-        to MobilePhonesPage
-        selectPriceRange("Rs 5000-10000")
-        then:"User navigated to selected Price range phones page"
-    }
-
-    def cleanup()
-    {
-        browser.driver.close()
+        gotoSubMenu("Laptops")
+        and: "Select ViewAll option"
+        at SubMenuPage
+        selectViewAllOption()
+        and: "Enter Price Range"
+        selectPriceRange(25000, 40000)
+        and: "Filter by Customer Rating"
+        customerRatingFilter()
+        selectTopRatedProduct()
+        getProductNameAndCheckRating()
+        then:"Get top rated productname and check its rating with 5 star"
     }
 }
