@@ -38,5 +38,14 @@ dependencies {
     // Drivers
     testCompile "org.seleniumhq.selenium:selenium-chrome-driver:$seleniumVersion"
     testCompile "org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion"
+    compile group: 'org.apache.poi', name: 'poi', version: '3.9'
 
 }
+
+
+
+String ff=new File(".").getCanonicalPath().split("SnapDeal")[0]
+//String path=file.getCanonicalPath().split("SnapDeal")[0]
+String filePath=path+"\\src\\test\\resources"
+println(ff)
+println()

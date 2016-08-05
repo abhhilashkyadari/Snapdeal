@@ -17,18 +17,24 @@ class SnapdealSuite extends GebReportingSpec {
         given: "Navigate to Base url"
         to HomePage
         when: "Hover on specified Menu"
-        gotoMenu("Computers, Office & Gaming")
+        //gotoMenu("Computers, Office & Gaming")
+          gotoMenu()
         and: "Select submenu"
-        gotoSubMenu("Laptops")
+       // gotoSubMenu("Laptops")
+        gotoSubMenu()
         and: "Select ViewAll option"
         at SubMenuPage
         selectViewAllOption()
         and: "Enter Price Range"
-        selectPriceRange(25000, 40000)
+        selectPriceRange()
         and: "Filter by Customer Rating"
         customerRatingFilter()
+        and: "Select Top Rated product"
         selectTopRatedProduct()
-        getProductNameAndCheckRating()
-        then:"Get top rated productname and check its rating with 5 star"
+        and:"Get Top rated ProductName"
+        getProductName()
+        then:"Validate the top rated product with 5 star"
+        validateWithFiveStarRating()
+        //validateWithFiveStarRating()=="5.0"
     }
 }

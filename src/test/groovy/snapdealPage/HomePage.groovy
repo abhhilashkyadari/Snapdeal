@@ -1,5 +1,6 @@
 package snapdealPage
 
+import Utils.Utilities
 import geb.Page
 import snapdealModule.HomePageModule
 
@@ -7,6 +8,7 @@ import snapdealModule.HomePageModule
  * Created by abhilashk on 8/3/2016.
  */
 class HomePage extends Page{
+    Utilities util = new Utilities()
     static at = {title=="Online Shopping in India at Snapdeal - Buy Books, Mobiles, Laptops, Apparel, Watches, Footwear, Recharge, Bill Payments & More"}
     //static at = {$("title").text().startsWith("Online Shopping in India at Snapdeal")}
 
@@ -16,16 +18,18 @@ class HomePage extends Page{
     /*
     this function verifes whether user is navigated to Home page or not
      */
-    def gotoMenu(def menu)
+    def gotoMenu()
     {
+        String menu=util.getMenu()
+        print(menu)
         interact {
             moveToElement(homePageObjects.menuLink(menu))
         }
     }
 
-    def gotoSubMenu(def submenu)
+    def gotoSubMenu()
     {
+        String submenu=util.getSubMenu()
         homePageObjects.submenuLink(submenu).click()
     }
-
 }

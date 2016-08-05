@@ -2,13 +2,20 @@
  * Created by abhilashk on 8/3/2016.
  */
 package snapdealPage
+
+import Utils.Utilities
 import geb.Page
 import geb.error.RequiredPageContentNotPresent
+import jxl.Cell
+import jxl.Sheet
+import jxl.Workbook
+import org.junit.Assert
 import org.openqa.selenium.By
 import org.openqa.selenium.WebElement
 import snapdealModule.SubMenuModule
 
 class SubMenuPage extends Page{
+    Utilities util = new Utilities()
     static at={$("a.color-white")[0]}
     static content ={
         subMenuPageObjects {module SubMenuModule}
@@ -41,8 +48,10 @@ class SubMenuPage extends Page{
     /*
     This method is used for entering price range
      */
-    def selectPriceRange(def from, def to)
+    def selectPriceRange()
     {
+        String from=util.getPriceFrom()
+        String to=util.getPriceTo()
         sync(subMenuPageObjects.priceFrom)
         subMenuPageObjects.priceFrom.firstElement().clear()
         subMenuPageObjects.priceFrom.value(from)
@@ -92,8 +101,8 @@ class SubMenuPage extends Page{
                 print("Exception in finding highest rated value i.e., provided invalid pattern in split() ")
             }
         }
-
     }
+
 
     /*
     This method is used for selecting customer rating
@@ -111,16 +120,22 @@ class SubMenuPage extends Page{
     This method is for getting top rated product name and its rating
      */
 
-    def getProductNameAndCheckRating()
-    {
+    def getProductName() {
         println(subMenuPageObjects.productTitle.text())
         subMenuPageObjects.ratingLink.click()
-        //sync(subMenuPageObjects.ratingValue)
         sleep(1000)
-        float actualRating=Float.parseFloat(subMenuPageObjects.ratingValue.text())
-        if(actualRating==5.0)
+    }
+
+    def validateWithFiveStarRating()
+    {
+        String actualRating=subMenuPageObjects.ratingValue.text()
+        print(actualRating)
+        if(actualRating=="5.0")
         {
-            println("Product is top rated i.e.," + actualRating)
+            return true
+        }
+        else {
+            return false
         }
     }
 }
