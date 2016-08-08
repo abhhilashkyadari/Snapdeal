@@ -41,8 +41,9 @@ class SubMenuPage extends Page{
      */
     def selectViewAllOption()
     {
-        sync(subMenuPageObjects.viewAll)
-        subMenuPageObjects.viewAll.click()
+//        sync(subMenuPageObjects.viewAll)
+//        subMenuPageObjects.viewAll.click()
+        util.safeClick(subMenuPageObjects.viewAll)
     }
 
     /*
@@ -58,8 +59,9 @@ class SubMenuPage extends Page{
         sync(subMenuPageObjects.priceUpTo)
         subMenuPageObjects.priceUpTo.firstElement().clear()
         subMenuPageObjects.priceUpTo.value(to)
-        sync(subMenuPageObjects.search)
-        subMenuPageObjects.search.click()
+        //sync(subMenuPageObjects.search)
+        //subMenuPageObjects.search.click()
+        util.safeClick(subMenuPageObjects.search)
         sleep(1000)
     }
 
@@ -73,7 +75,8 @@ class SubMenuPage extends Page{
         int key
         if (products.size()==0)
         {
-            products.get(key).findElement(By.cssSelector(".product-title")).click()
+            util.safeClick(products.get(key).findElement(By.cssSelector(".product-title")))
+            //products.get(key).findElement(By.cssSelector(".product-title")).click()
         }
         else {
             try {
@@ -94,7 +97,8 @@ class SubMenuPage extends Page{
                         }
                     }
                 }
-                products.get(key).findElement(By.cssSelector(".product-title")).click()
+                util.safeClick(products.get(key).findElement(By.cssSelector(".product-title")))
+                //products.get(key).findElement(By.cssSelector(".product-title")).click()
             }
             catch (Exception e)
             {
@@ -109,11 +113,14 @@ class SubMenuPage extends Page{
      */
     def customerRatingFilter()
     {
-        sync(subMenuPageObjects.expandCustomerRatingSection)
-        subMenuPageObjects.expandCustomerRatingSection.click()
-        sync(subMenuPageObjects.customertRatingRadioButton)
-        subMenuPageObjects.customertRatingRadioButton.click()
+//        sync(subMenuPageObjects.expandCustomerRatingSection)
+//        subMenuPageObjects.expandCustomerRatingSection.click()
+        util.safeClick(subMenuPageObjects.expandCustomerRatingSection)
+//        sync(subMenuPageObjects.customertRatingRadioButton)
+//        subMenuPageObjects.customertRatingRadioButton.click()
+        util.safeClick(subMenuPageObjects.customertRatingRadioButton)
         sleep(1000)
+
     }
 
     /*
@@ -122,7 +129,8 @@ class SubMenuPage extends Page{
 
     def getProductName() {
         println(subMenuPageObjects.productTitle.text())
-        subMenuPageObjects.ratingLink.click()
+        util.safeClick(subMenuPageObjects.ratingLink)
+        //subMenuPageObjects.ratingLink.click()
         sleep(1000)
     }
 

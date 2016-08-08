@@ -13,14 +13,12 @@ class SnapdealSuite extends GebReportingSpec {
         browser.driver.manage().window().maximize()
     }
 
-    def selectTopRatedForGivenProductType() {
+    def selectTopRatedProductForGivenProductType() {
         given: "Navigate to Base url"
         to HomePage
         when: "Hover on specified Menu"
-        //gotoMenu("Computers, Office & Gaming")
-          gotoMenu()
+        gotoMenu()
         and: "Select submenu"
-       // gotoSubMenu("Laptops")
         gotoSubMenu()
         and: "Select ViewAll option"
         at SubMenuPage
@@ -35,6 +33,5 @@ class SnapdealSuite extends GebReportingSpec {
         getProductName()
         then:"Validate the top rated product with 5 star"
         validateWithFiveStarRating()
-        //validateWithFiveStarRating()=="5.0"
     }
 }

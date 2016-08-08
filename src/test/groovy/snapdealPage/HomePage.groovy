@@ -30,6 +30,7 @@ class HomePage extends Page{
     def gotoSubMenu()
     {
         String submenu=util.getSubMenu()
-        homePageObjects.submenuLink(submenu).click()
+        util.safeClick(homePageObjects.submenuLink(submenu))
+        //homePageObjects.submenuLink(submenu).click()
     }
 }
