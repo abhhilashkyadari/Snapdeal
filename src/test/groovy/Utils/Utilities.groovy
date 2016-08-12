@@ -52,25 +52,30 @@ public class Utilities {
         return values;
     }
 
+    final String[] values= getValuesFromExcel()
+
     def getMenu(){
-        String[] val= getValuesFromExcel()
+        //String[] val= getValuesFromExcel()
         //print(getMenu)
-        return val[0]
+        return values[0]
     }
     def getSubMenu(){
-        String[] val= getValuesFromExcel()
+        //String[] val= getValuesFromExcel()
         //print(getMenu)
-        return val[1]
+        //return val[1]
+        return values[1]
     }
     def getPriceFrom(){
-        String[] val= getValuesFromExcel()
+        //String[] val= getValuesFromExcel()
         //print(getMenu)
-        return val[2]
+        //return val[2]
+        return values[2]
     }
     def getPriceTo(){
-        String[] val= getValuesFromExcel()
+        //String[] val= getValuesFromExcel()
         //print(getMenu)
-        return val[3]
+        //return val[3]
+        return values[3]
     }
 
     def sync(def element)
