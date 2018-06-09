@@ -2,7 +2,6 @@
     "products":[
       {
       img_id:'1',
-      img:'assets/images/1.jpg',
       productName:"Telangana Painting",
       price:'10000/-',
       catogery:'Festivals',
@@ -11,7 +10,6 @@
     },
     {
       img_id:'2',
-      img:'assets/images/2.jpg',
       productName:"Telangana Painting2",
       price:'10000/-',
       catogery:'Festivals',
