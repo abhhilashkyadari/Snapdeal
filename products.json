@@ -5,6 +5,7 @@
 "img": "assets/Paintings/1.jpg",
 "productName": "Telangana Painting",
 "price": "10000/-",
+"size":"14'x14'",
 "catogery": "Festivals",
 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis."
 },
@@ -14,6 +15,7 @@
 "productName": "Telangana Painting2",
 "price": "10000/-",
 "catogery": "Festivals",
+"size":"10'x10'",
 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis."
 },
 {
@@ -21,6 +23,7 @@
 "img": "assets/Paintings/3.jpg",
 "productName": "Telangana Painting3",
 "price": "10000/-",
+"size":"10'x10'",
 "catogery": "Men"
 },
 {
@@ -28,6 +31,7 @@
 "img": "assets/Paintings/4.jpg",
 "productName": "Telangana Painting4",
 "price": "10000/-",
+"size":"10'x10'",
 "catogery": "farming"
 },
 {
@@ -35,13 +39,15 @@
 "img": "assets/Paintings/5.jpg",
 "productName": "Telangana Painting5",
 "price": "100004273894823",
-"catogery": "farming"
+"catogery": "farming",
+"size":"10'x10'"
 },
 {
 "img_id": "6",
 "img": "assets/Paintings/6.jpg",
 "productName": "Telangana Painting",
 "price": "100004324324",
+"size":"10'x10'",
 "catogery": "traditional"
 },
 {
@@ -49,6 +55,7 @@
 "img": "assets/Paintings/7.jpg",
 "productName": "Telangana Painting",
 "price": "10000/-",
+"size":"10'x10'",
 "catogery": "traditional"
 },
 {
@@ -56,6 +63,7 @@
 "img": "assets/Paintings/8.jpg",
 "productName": "Telangana Painting2",
 "price": "10000/-",
+"size":"10'x10'",
 "catogery": "traditional"
 },
 {
@@ -63,6 +71,7 @@
 "img": "assets/Paintings/9.jpg",
 "productName": "Telangana Painting3",
 "price": "10000/-",
+"size":"10'x10'",
 "catogery": "women"
 },
 {
@@ -70,20 +79,23 @@
 "img": "assets/Paintings/10.jpg",
 "productName": "Telangana Painting4",
 "price": "10000/-",
+"size":"10'x10'",
 "catogery": "women"
 },
 {
 "img_id": "11",
 "img": "assets/Paintings/11.jpg",
 "productName": "Telangana Painting5",
-"price": "100004273894823",
+"price": "1000043",
+"size":"10'x10'",
 "catogery": "women"
 },
-  {
+{
 "img_id": "12",
 "img": "assets/Paintings/12.jpg",
 "productName": "Telangana Painting5",
-"price": "100004273894823",
+"price": "100004273",
+"size":"10'x10'",
 "catogery": "women"
 },
 {
@@ -91,6 +103,7 @@
 "img": "assets/Paintings/13.jpg",
 "productName": "Telangana Painting",
 "price": "100004324324",
+"size":"10'x10'",
 "catogery": "women"
 },
 {
@@ -98,6 +111,7 @@
 "img": "assets/Paintings/14.jpg",
 "productName": "Telangana Painting",
 "price": "10000/-",
+"size":"10'x10'",
 "catogery": "women"
 },
 {
@@ -105,6 +119,7 @@
 "img": "assets/Paintings/15.jpg",
 "productName": "Telangana Painting",
 "price": "10000/-",
+"size":"10'x10'",
 "catogery": "women"
 },
 {
@@ -112,6 +127,7 @@
 "img": "assets/Paintings/16.jpg",
 "productName": "Telangana Painting",
 "price": "10000/-",
+"size":"10'x10'",
 "catogery": "women"
 },
 {
@@ -119,6 +135,7 @@
 "img": "assets/Paintings/17.jpg",
 "productName": "Telangana Painting",
 "price": "10000/-",
+"size":"10'x10'",
 "catogery": "women"
 },
 {
@@ -126,6 +143,7 @@
 "img": "assets/Paintings/18.jpg",
 "productName": "Telangana Painting",
 "price": "10000/-",
+"size":"10'x10'",
 "catogery": "women"
 }
 ]
