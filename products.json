@@ -99,6 +99,34 @@
 "productName": "Telangana Painting",
 "price": "10000/-",
 "catogery": "women"
+},
+{
+"img_id": "15",
+"img": "assets/Paintings/15.jpg",
+"productName": "Telangana Painting",
+"price": "10000/-",
+"catogery": "women"
+},
+{
+"img_id": "16",
+"img": "assets/Paintings/16.jpg",
+"productName": "Telangana Painting",
+"price": "10000/-",
+"catogery": "women"
+},
+{
+"img_id": "17",
+"img": "assets/Paintings/17.jpg",
+"productName": "Telangana Painting",
+"price": "10000/-",
+"catogery": "women"
+},
+{
+"img_id": "18",
+"img": "assets/Paintings/18.jpg",
+"productName": "Telangana Painting",
+"price": "10000/-",
+"catogery": "women"
 }
 ]
 }
