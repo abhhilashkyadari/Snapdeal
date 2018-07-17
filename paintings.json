@@ -47,7 +47,7 @@
 "img_id": "6",
 "img": "assets/Paintings/6.jpg",
 "productName": "Telangana Painting",
-"price": "10000"
+"price": "10000",
 "size": "10'x10'",
 "catogery": "traditional"
 },
@@ -103,7 +103,7 @@
 "img_id": "13",
 "img": "assets/Paintings/13.jpg",
 "productName": "Telangana Painting",
-"price": "10000"
+"price": "10000",
 "size": "10'x10'",
 "catogery": "women"
 },
